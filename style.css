@@ -1,0 +1,268 @@
+* {
+		margin: 0;
+		padding: 0;
+}
+
+:root{
+  --neutral: #dcd5b8;
+  --main-dark: #013328;
+  --main-med: #748b6d;
+  --main-lt: #bbd4bf;
+  --sec-med: #cc8b65;
+  --sec-lt: #dbe9a2;
+  --contrast-bright: #d05663;
+  --contrast-dark: #635048;
+}
+
+
+
+
+body {
+	margin: 0;
+ 	background-color: var(--main-dark);
+ 	color: var(--main-lt);
+/*  	font-family: Helvetica, sans-serif; */
+}
+
+.images {
+
+	display: grid;
+	place-items: center;
+}
+
+.slider {
+	width: 100%;
+	max-width: 800px;
+	/* 	height: 350px;	*/
+
+	position: relative;
+}
+
+.slide {
+	width: 100%;
+	max-width: 800px;
+	height: 75vh;
+	position: absolute;
+	transition: all .5s ease-in-and-out;
+}
+
+.slide img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	/* 	background-color: var(--main-dark);	*/
+
+}
+
+.img_btn {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	padding: 10px;
+	border: none;
+	border-radius: 50%;
+	z-index: 10;
+	cursor: pointer;
+	background-color: #ffffff80;
+	font-size: 18px;
+}
+
+.img_btn:active {
+	transform: scale(1.1);
+}
+
+#prv {
+	top: 45%;
+	left: 2%;
+}
+
+#nxt {
+	top: 45%;
+	right: 2%;
+}
+
+
+
+
+
+
+
+#img-div {
+/*
+	background: url(images/Annegret_and_Andreas.jpeg) no-repeat left top fixed ;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	margin: -1em;
+ */
+ 	max-height: 1200px;
+	position: fixed;
+	z-index: -1;
+
+}
+
+#img-caption {
+	background-color: var(--main-dark);
+	width: 100 vw;
+}
+
+
+
+#heading {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	padding: 0 1.5em ;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	background-color: var(--main-dark);
+	z-index: 1;
+  border-top: .125em solid var(--sec-med);
+}
+
+
+
+h1 {
+font-family: heading, Times, serif;
+color: var(--main-lt);
+font-weight: 550;
+
+}
+
+figcaption {
+	margin: 0 .5em 0 .5em;
+	float: right;
+}
+
+.space {
+	margin:60vh;
+}
+
+.space2{
+	margin: 30vh;
+	width: 100vw;
+}
+
+
+#tribute-info {
+	display: flex;
+ 	flex-wrap: wrap; /* Each timeline item is within this box. Without wrapping they scroll out to the right */
+ 	/* flex-direction: column; */
+ 	width: 100vw; /* Gives the whole section container the full width of the viewport */
+ 	justify-content: center;  /* Moves boxes within this div to the right */
+	gap: 2em;
+}
+
+
+
+
+
+.timeline {
+  margin: 1em;
+  display: flex;
+  max-width: 500px;
+  font-family: timeline;
+  flex-wrap: wrap; /*this line keeps the drop-down text beneath the heading*/
+}
+
+
+.collapsible {
+  color: var(--main-dark);
+  cursor: pointer;
+  padding: .5em 0 .5em .5em;
+  width: 100%;
+  border: none;
+  font-size: 2em;
+  display: flex;
+  flex-wrap: nowrap;
+  font-family: dejavu;
+  font-weight: 700;
+  justify-content: space-between;
+  opacity: 75%;
+  max-height: 2em;
+}
+
+.collapsible:after {
+  content: '\02795';
+  color: var(--main-dark);
+  float: right;
+  font-size: .75em;
+  margin: 0 .5em;
+}
+
+.active:after {
+  content: '\2796';
+  color: var(--main-dark);
+  font-size: .75em;
+  margin: 0 .5em;
+}
+
+.collapsible:hover {
+  opacity: 80%;
+}
+
+.content {
+  padding: 0 10px;
+/*   max-width: 480px; */
+  max-height: 0;
+  /*   overflow: hidden;  */
+
+  transition: max-height 0.2s ease-out;
+  background-color: var(--neutral);
+  margin: -1px 0;
+  width: 100%;
+  color: var(--contrast-dark);
+  opacity: 80%;
+}
+
+.drop_a {
+  background-color: var(--main-lt);
+}
+
+.drop_b {
+  background-color: var(--sec-med);
+}
+
+.drop_c {
+  background-color: var(--sec-lt);
+}
+
+.drop_d {
+  background-color: var(--contrast-bright);
+}
+
+#learn-more {
+	background-color: var(--main-dark);
+	width: 100vw;
+	text-align: center;
+}
+
+
+
+
+
+@media screen and ( max-width: 510px ){
+  h1 {
+	font-size: 1.5em;
+  }
+ .timeline {
+    margin: 0;
+  }
+
+/*
+  #img-div {
+	background: url(images/Annegret_and_Andreas.jpeg) no-repeat left top fixed 500px auto;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+  }
+ */
+
+@media screen and ( min-width: 2000px ) {
+	#tribute-info {
+		justify-content: flex-end;
+	}
+}
