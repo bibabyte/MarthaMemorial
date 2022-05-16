@@ -1,5 +1,5 @@
 
-
+//CAROUSEL
 // Select all slides
 const slides = document.querySelectorAll(".slide");
 
@@ -7,6 +7,18 @@ const slides = document.querySelectorAll(".slide");
 slides.forEach((slide, indx) => {
   slide.style.transform = `translateX(${indx * 100}%)`;
 })
+
+//RANDOMIZE
+// document.addEventListener("load", randomize(slides));
+// const randomly = () => Math.random() - 0.5;
+
+/*
+const rdmSlide = [].concat(slides).sort((slides) => {
+  Math.random() - 0.5;
+});*/
+
+// slides.sort(() => Math.random() - 0.5);
+
 
 //current slide counter
 let curSlide = 0;
@@ -28,9 +40,8 @@ function displayNext() {
   } else {
     curSlide ++;
   }
-
   slides.forEach((slide, indx) => {
-    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
   });
 };
 
@@ -47,3 +58,29 @@ function displayPrev() {
     slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
   });
 }
+
+  //RANDOMIZE
+/*
+function randomize(x) {
+  x.forEach(() => Math.random() - .5);
+}
+*/
+
+
+
+/*
+
+var slider = document.querySelectorAll('slider');
+var eachSlide = slider.children;
+var frag = document.createDocumentFragment();
+var newIndex = Math.floor(Math.random() * eachSlide.length);
+while (eachSlide.length) {
+  frag.append(eachSlide[newIndex]);
+  alert(newIndex);
+}
+parent.appendChild(frag);
+*/
+
+
+
+//END CAROUSEL
