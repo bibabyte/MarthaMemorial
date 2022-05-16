@@ -5,14 +5,25 @@
 
 :root{
   --neutral: #dcd5b8;
-  --main-dark: #013328;
+  --main-dark: cream;
   --main-med: #748b6d;
-  --main-lt: #bbd4bf;
+  --main-lt: #033300;
   --sec-med: #cc8b65;
   --sec-lt: #dbe9a2;
   --contrast-bright: #d05663;
   --contrast-dark: #635048;
 }
+
+
+/*
+colors:
+MMface: #fdd2b0;
+MMlips: #e29d97;
+MMhair: #e29d97;
+Trees: #5e6346
+
+ */
+
 
 
 
