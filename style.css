@@ -5,7 +5,7 @@
 
 :root{
   --neutral: #dcd5b8;
-  --main-dark: cream;
+  --main-dark: ivory;
   --main-med: #748b6d;
   --main-lt: #033300;
   --sec-med: #cc8b65;
@@ -50,6 +50,21 @@ body {
 	flex-grow: 1;
 	flex-basis: 100vh;
 }
+
+h1, h2, h3, h4 {
+	font-family:  paladio, Times, serif;
+	padding: 1.5rem;
+}
+
+h2 {
+	font-size: -1.125em;
+}
+p {
+	margin: .25em 1.5em;
+	max-width: 800px;
+	font-family: Helvetica, Ariel, sans-serif;
+}
+
 
 /* CAROUSEL */
 
@@ -210,13 +225,14 @@ header {
 	background: var(--main-med);
 	/* 	align-self: center;	*/
 	flex-grow: 1;
+	border-radius: 5px;
 	text-decoration: none;
 	font-size: 1.123em;
 }
 
 .menu a:hover {
-	background: var(--main-lt);
-	color: var(--main-dark);
+	background: var(--sec-lt);
+	color: var(--main-lt);
 	transition: .7s;
 }
 
@@ -229,26 +245,29 @@ header {
 
 
 .landing {
-	padding-top: 4em;
-	padding-bottom: 4em;
+	padding-top: 2em;
+
+	/* 	padding-bottom: 4em;	*/
+
+
 	display: block;
 }
 
 .martha {
-	margin-left: 2em;
 	position: sticky;
 	top: 0;
 }
 
 
 header h1 {
-	padding-bottom: .5rem;
-	font-family: paladio, Times, serif;
+
+	padding-bottom: 0;
 }
 
 header h4 {
 	font-family: Helvetica, Ariel, sans-serif;
 	font-size: 1.15em;
+	padding-top: .67em;
 }
 
 section {
@@ -265,14 +284,14 @@ section {
 	color: var(--main-dark);
 	padding: 1.5em 2em;
 	border-radius: 15px;
-	background-color: var(--main-lt);
+	background-color: var(--main-med);
 	font-size: 1.123em;
 	box-shadow: 10px 5px 5px #00000080;
 
 }
 
 #obit-link:hover {
-	background-color: var(--main-med);
+	background-color: var(--sec-lt);
 	transition: .7s;
 }
 
@@ -287,17 +306,28 @@ footer{
 	/*
 position: sticky;
 	bottom: 0;*/
-	max-width: 100%;
+	/* 	max-width: 100%;	*/
+
   padding: 1em;
 	padding-top: 3em;
-	background: linear-gradient(179.5deg, var(--main-dark), var(--main-med) 2.8em);
+	background: linear-gradient(ivory, var(--main-med));
 	font-family: Helvetica, Ariel, sans-serif;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
 }
 
 
 .foot {
 	display: flex;
-	width: 80%;
+
+	justify-content: space-around;
+	flex-basis: 100%;
+	flex-direction: row;
+}
+
+.foot a {
+	color: var(--main-lt);
 }
 
 .contribute, .yourMemorial {
@@ -308,18 +338,28 @@ position: sticky;
 	flex-grow: 1;
 	margin: 1em;
 	box-shadow: 5px 5px 5px #00000080, -5px -1px 5px #00000080;;
+	width: 45%;
+	text-align: center;
+	flex-grow: 5;
 }
 
 .contribute:hover, .yourMemorial:hover {
-	background-color: var(--main-lt);
+	background-color: var(--sec-lt);
 	transition: .7s;
 }
 
+.contribute {
+	font-size: 1.125em;
+}
+
+.credit {
+
+}
 
 
+.btm.credit {
 
-
-
+}
 
 
 
