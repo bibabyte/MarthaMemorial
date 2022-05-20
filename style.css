@@ -10,7 +10,7 @@
   --main-lt: #033300;
   --sec-med: #cc8b65;
   --sec-lt: #dbe9a2;
-  --contrast-bright: #d05663;
+  --contrast-bright: #936897;
   --contrast-dark: #635048;
 }
 
@@ -32,6 +32,7 @@ body {
 	margin: 0;
  	background-color: var(--main-dark);
  	color: var(--main-lt);
+	height: 100vh;
 }
 
 .wrapper {
@@ -48,7 +49,12 @@ body {
 
 .page_body {
 	flex-grow: 1;
-	flex-basis: 100vh;
+	flex-basis: 60vw;
+	display: flex;
+	flex-direction: row;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 }
 
 h1, h2, h3, h4 {
@@ -65,6 +71,11 @@ p {
 	font-family: Helvetica, Ariel, sans-serif;
 }
 
+ .intro {
+	 display: flex;
+	 flex-direction: column;
+
+ }
 
 /* CAROUSEL */
 
@@ -75,8 +86,10 @@ p {
 	margin-bottom: 1em;
 	padding: 1em;
 	border-radius: 15px;
-	overflow: hidden;
-	height: 80vh;
+	/* 	overflow: hidden;	*/
+
+	/* 	height: 80vh;	*/
+
 }
 
 .slider {
@@ -87,7 +100,8 @@ p {
 .slide {
   width: 100%;
   max-width: 800px;
-  height: 80vh;
+  /*   height: 80vh;  */
+
   position: absolute;
 	background: var(--main-dark);
 }
@@ -195,6 +209,10 @@ p {
 	right: 2vw;
 }
 
+.carousel {
+	min-width: 300px;
+}
+
 /* END CAROUSEL*/
 
 /* HEADER */
@@ -271,7 +289,8 @@ header h4 {
 }
 
 section {
-	height: 100%;
+	/* 	height: 100%;	*/
+
 }
 
 #obit {
@@ -310,29 +329,61 @@ position: sticky;
 
   padding: 1em;
 	padding-top: 3em;
-	background: linear-gradient(ivory, var(--main-med));
+	background: linear-gradient(ivory, var(--contrast-bright) 74%);
 	font-family: Helvetica, Ariel, sans-serif;
 	display: flex;
-	justify-content: center;
-	flex-direction: column;
+	justify-content: space-between;
+	flex-direction: row;
 }
 
 
 .foot {
 	display: flex;
-
 	justify-content: space-around;
 	flex-basis: 100%;
-	flex-direction: row;
+	flex-direction: column;
+	color: var(--main-lt);
+	width: 80%;
 }
 
 .foot a {
 	color: var(--main-lt);
+	background: var(--sec-lt);
 }
 
-.contribute, .yourMemorial {
-	text-decoration: none;
+.buy {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	margin-right: 1em;
+	align-items: center;
+}
+
+.buy button {
+		border-radius: 50%;
+		width: 9em;
+		height: 9em;
+		border: none;
+		background: #CFA4D3;
+		box-shadow:
+				.3em .3em .7em #00000080,
+				inset 0 0 2px 0 rgba(255,255,255,.4),
+        inset 0 0 3px 0 rgba(0,0,0,.4),
+        inset 0 0 3px 5px rgba(0,0,0,.05),
+        2px 2px 4px 0 rgba(0,0,0,.25);
+		padding: .75em;
+}
+
+.buy button:hover {
+	background-color: var(--main-med);
+	transition: .7s;
 	color: var(--main-dark);
+	box-shadow: .3em .3em .7em #00000080;
+}
+
+.contribute {
+	text-decoration: none;
+	color: var(--main-lt);
 	padding: 1em;
 	border-radius: 5px;
 	flex-grow: 1;
@@ -343,8 +394,8 @@ position: sticky;
 	flex-grow: 5;
 }
 
-.contribute:hover, .yourMemorial:hover {
-	background-color: var(--sec-lt);
+.contribute:hover {
+	background-color: var(--main-dark);
 	transition: .7s;
 }
 
@@ -363,14 +414,23 @@ position: sticky;
 
 
 
-@media screen and ( max-width: 510px ){
+@media screen and ( max-width: 5em ){
   h1 {
 	font-size: 1.5em;
   }
  .timeline {
     margin: 0;
   }
+	foot {
+		width: 5em;
+	}
+}
 
+@media screen and ( max-width: 800px) {
+		.page_body {
+			flex-direction: column;
+		}
+}
 /*
   #img-div {
 	background: url(images/Annegret_and_Andreas.jpeg) no-repeat left top fixed 500px auto;
