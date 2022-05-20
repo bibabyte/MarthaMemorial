@@ -98,11 +98,8 @@ p {
 }
 
 .slide {
-  width: 100%;
   max-width: 800px;
   /*   height: 80vh;  */
-
-  position: absolute;
 	background: var(--main-dark);
 }
 
@@ -421,7 +418,7 @@ position: sticky;
  .timeline {
     margin: 0;
   }
-	foot {
+	.foot {
 		width: 5em;
 	}
 }
