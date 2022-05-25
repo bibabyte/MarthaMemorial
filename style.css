@@ -103,6 +103,7 @@ p {
   max-width: 800px;
   /*   height: 80vh;  */
 	background: var(--main-bkgd);
+	padding: .5em;
 }
 
 .slide img {
